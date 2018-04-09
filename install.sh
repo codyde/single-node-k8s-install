@@ -21,6 +21,7 @@ yum install -y yum-utils
 cat << EOF > /etc/docker/daemon.json
 {
   "exec-opts": ["native.cgroupdriver=systemd"]
+  "insecure-registries" : [ "10.0.0.0/8:5000" ]
 }
 EOF
 
